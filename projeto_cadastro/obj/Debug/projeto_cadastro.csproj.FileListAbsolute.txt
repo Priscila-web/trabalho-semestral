@@ -1,0 +1,9 @@
+C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\bin\Debug\projeto_cadastro.exe.config
+C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\bin\Debug\projeto_cadastro.exe
+C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\bin\Debug\projeto_cadastro.pdb
+C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\obj\Debug\projeto_cadastro.csprojAssemblyReference.cache
+C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\obj\Debug\projeto_cadastro.Form1.resources
+C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\obj\Debug\projeto_cadastro.Properties.Resources.resources
+C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\obj\Debug\projeto_cadastro.csproj.GenerateResource.cache
+C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\obj\Debug\projeto_cadastro.exe
+C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\obj\Debug\projeto_cadastro.pdb
