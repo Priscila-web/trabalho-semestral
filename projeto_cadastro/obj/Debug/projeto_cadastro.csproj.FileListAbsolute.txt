@@ -7,3 +7,16 @@ C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\obj\Debug\proje
 C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\obj\Debug\projeto_cadastro.csproj.GenerateResource.cache
 C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\obj\Debug\projeto_cadastro.exe
 C:\Users\Priscila\source\repos\projeto_cadastro\projeto_cadastro\obj\Debug\projeto_cadastro.pdb
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\bin\Debug\projeto_cadastro.exe.config
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\bin\Debug\projeto_cadastro.exe
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\bin\Debug\projeto_cadastro.pdb
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.csprojAssemblyReference.cache
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.Properties.Resources.resources
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.csproj.GenerateResource.cache
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.csproj.CoreCompileInputs.cache
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.exe
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.pdb
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\bin\Debug\MySql.Data.dll
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.frmHome.resources
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.Splash.resources
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.csproj.CopyComplete
