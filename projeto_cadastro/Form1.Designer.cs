@@ -48,9 +48,9 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maisOpçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.maisOpçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -334,10 +334,17 @@
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
             // 
+            // maisOpçõesToolStripMenuItem
+            // 
+            this.maisOpçõesToolStripMenuItem.Name = "maisOpçõesToolStripMenuItem";
+            this.maisOpçõesToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.maisOpçõesToolStripMenuItem.Text = "Edição de Registros";
+            this.maisOpçõesToolStripMenuItem.Click += new System.EventHandler(this.maisOpçõesToolStripMenuItem_Click);
+            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -348,13 +355,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(151, 20);
             this.txtID.TabIndex = 21;
-            // 
-            // maisOpçõesToolStripMenuItem
-            // 
-            this.maisOpçõesToolStripMenuItem.Name = "maisOpçõesToolStripMenuItem";
-            this.maisOpçõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.maisOpçõesToolStripMenuItem.Text = "Edição de Registros";
-            this.maisOpçõesToolStripMenuItem.Click += new System.EventHandler(this.maisOpçõesToolStripMenuItem_Click);
             // 
             // frmHome
             // 
@@ -382,6 +382,7 @@
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "´";
+            this.Load += new System.EventHandler(this.frmHome_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

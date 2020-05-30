@@ -38,9 +38,8 @@ namespace projeto_cadastro
 
                 //Criando variaveis para receber os valores do formulario.
                 string nomeUsu, sexoUsu, ufUsu, favFilm, favMusic;
-                int idadeUsu, idUsu;
-
-                idUsu = Convert.ToInt32(txtID.Text);
+                int idadeUsu;         
+                
                 nomeUsu = txtNome.Text;
                 idadeUsu = Convert.ToInt32(txtIdade.Text);
                 sexoUsu = cbbSex.Text;
@@ -75,7 +74,7 @@ namespace projeto_cadastro
                 comando = null;
 
                 //Retorna que a operação foi realizada, os campos serão limpos para o proximo cadastro e o cursor será posicionado no campo Nome.
-                MessageBox.Show("Pessoa cadastrada com sucesso!");
+               
                 txtID.Clear();
                 txtNome.Clear();
                 txtIdade.Clear();
@@ -207,6 +206,11 @@ namespace projeto_cadastro
             btnExcluir.Enabled = true;
             txtID.Enabled = true;
             txtID.Focus();
+        }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
