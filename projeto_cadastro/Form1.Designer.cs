@@ -45,10 +45,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnConsultar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maisOpçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -87,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(137, 15);
+            this.label4.Location = new System.Drawing.Point(127, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 18);
             this.label4.TabIndex = 3;
@@ -172,9 +172,9 @@
             "SP",
             "SE",
             "TO"});
-            this.cbbUF.Location = new System.Drawing.Point(181, 12);
+            this.cbbUF.Location = new System.Drawing.Point(163, 12);
             this.cbbUF.Name = "cbbUF";
-            this.cbbUF.Size = new System.Drawing.Size(40, 26);
+            this.cbbUF.Size = new System.Drawing.Size(67, 26);
             this.cbbUF.TabIndex = 9;
             // 
             // cbbFilme
@@ -248,7 +248,7 @@
             // btnCadastro
             // 
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastro.Location = new System.Drawing.Point(24, 297);
+            this.btnCadastro.Location = new System.Drawing.Point(85, 298);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(100, 28);
             this.btnCadastro.TabIndex = 12;
@@ -302,18 +302,6 @@
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Enabled = false;
-            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.Location = new System.Drawing.Point(144, 297);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(100, 28);
-            this.btnConsultar.TabIndex = 19;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -329,6 +317,7 @@
             // 
             this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.maisOpçõesToolStripMenuItem,
+            this.registrosToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
@@ -340,6 +329,13 @@
             this.maisOpçõesToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.maisOpçõesToolStripMenuItem.Text = "Edição de Registros";
             this.maisOpçõesToolStripMenuItem.Click += new System.EventHandler(this.maisOpçõesToolStripMenuItem_Click);
+            // 
+            // registrosToolStripMenuItem
+            // 
+            this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
+            this.registrosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.registrosToolStripMenuItem.Text = "Consulta Registros";
+            this.registrosToolStripMenuItem.Click += new System.EventHandler(this.registrosToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -362,7 +358,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(276, 382);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.label7);
@@ -400,23 +395,23 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtIdade;
-        private System.Windows.Forms.ComboBox cbbSex;
-        private System.Windows.Forms.ComboBox cbbUF;
-        private System.Windows.Forms.ComboBox cbbFilme;
-        private System.Windows.Forms.ComboBox cbbMusica;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.ToolStripMenuItem maisOpçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrosToolStripMenuItem;
+        public System.Windows.Forms.TextBox txtNome;
+        public System.Windows.Forms.TextBox txtIdade;
+        public System.Windows.Forms.ComboBox cbbSex;
+        public System.Windows.Forms.ComboBox cbbUF;
+        public System.Windows.Forms.ComboBox cbbFilme;
+        public System.Windows.Forms.ComboBox cbbMusica;
+        public System.Windows.Forms.TextBox txtID;
     }
 }
 

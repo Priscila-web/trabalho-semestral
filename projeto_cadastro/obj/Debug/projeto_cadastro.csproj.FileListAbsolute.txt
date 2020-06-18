@@ -33,3 +33,17 @@ C:\Users\Tester\Desktop\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_ca
 C:\Users\Tester\Desktop\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.csproj.CopyComplete
 C:\Users\Tester\Desktop\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.exe
 C:\Users\Tester\Desktop\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.pdb
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\bin\Debug\projeto_cadastro.exe.config
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\bin\Debug\projeto_cadastro.exe
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\bin\Debug\projeto_cadastro.pdb
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\bin\Debug\MySql.Data.dll
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.csprojAssemblyReference.cache
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.frmHome.resources
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.Properties.Resources.resources
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.Splash.resources
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.csproj.GenerateResource.cache
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.csproj.CoreCompileInputs.cache
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.csproj.CopyComplete
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.exe
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.pdb
+C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.frmConsulta.resources

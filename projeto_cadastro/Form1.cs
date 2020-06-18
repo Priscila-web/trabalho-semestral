@@ -23,29 +23,37 @@ namespace projeto_cadastro
         public frmHome()
         {
             InitializeComponent();
-        }
+
+        }           
 
         private void button1_Click(object sender, EventArgs e)
-        {   
+        {
+            //Criando variaveis para receber os valores do formulario.
+            string nomeUsu, sexoUsu, ufUsu, favFilm, favMusic;
+            int idadeUsu;
+
+            nomeUsu = txtNome.Text;
+            idadeUsu = Convert.ToInt32(txtIdade.Text);
+            sexoUsu = cbbSex.Text;
+            ufUsu = cbbUF.Text;
+            favFilm = cbbFilme.Text;
+            favMusic = cbbMusica.Text;
+
+            if (string.IsNullOrEmpty(nomeUsu) || string.IsNullOrEmpty(sexoUsu) || string.IsNullOrEmpty(ufUsu) || string.IsNullOrEmpty(favFilm) || string.IsNullOrEmpty(favMusic))
+            {
+                MessageBox.Show("Um dos campos para inclusão está vazio", "Inclusão de Dados - Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             //Aqui vou dar o tratamento para os dados vindos do Front
             try
             {
                 //Sintaxe das informações do banco que será conectado.
                 conexao = new MySqlConnection("server = localhost; database = projeto; uid = root; pwd =; port = 3306");
-                
+
                 //Comando SQL para inserção dos dados e criando parametros para cada uma das colunas do banco.
                 strSQL = "INSERT INTO PROJETO (cad_name,cad_sex,cad_idade,cad_UF,cad_filme,cad_musica) VALUES(@NOME,@SEXO,@IDADE,@UF,@FILME,@MUSICA)";
 
-                //Criando variaveis para receber os valores do formulario.
-                string nomeUsu, sexoUsu, ufUsu, favFilm, favMusic;
-                int idadeUsu;         
-                
-                nomeUsu = txtNome.Text;
-                idadeUsu = Convert.ToInt32(txtIdade.Text);
-                sexoUsu = cbbSex.Text;
-                ufUsu = cbbUF.Text;
-                favFilm = cbbFilme.Text;
-                favMusic = cbbMusica.Text;
 
                 //referenciando parametros criados a partir das colunas com as variaveis respectivas do formulario.
                 comando = new MySqlCommand(strSQL, conexao);
@@ -55,6 +63,8 @@ namespace projeto_cadastro
                 comando.Parameters.AddWithValue("@UF", ufUsu);
                 comando.Parameters.AddWithValue("@FILME", favFilm);
                 comando.Parameters.AddWithValue("@MUSICA", favMusic);
+
+
 
                 //Abrindo conexão com o banco, executando o comando INSERT que foi declarado acima e exibindo ao usuario mensagem de Cadastro bem sucedido.
                 conexao.Open();
@@ -74,7 +84,7 @@ namespace projeto_cadastro
                 comando = null;
 
                 //Retorna que a operação foi realizada, os campos serão limpos para o proximo cadastro e o cursor será posicionado no campo Nome.
-               
+
                 txtID.Clear();
                 txtNome.Clear();
                 txtIdade.Clear();
@@ -83,13 +93,8 @@ namespace projeto_cadastro
                 cbbSex.Text = string.Empty;
                 cbbUF.Text = string.Empty;
                 txtNome.Focus();
-            }          
-        }
-      
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-           
-        }
+            }
+        }       
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             try
@@ -146,6 +151,7 @@ namespace projeto_cadastro
                 cbbSex.Text = string.Empty;
                 cbbUF.Text = string.Empty;
                 txtNome.Focus();
+                
             }
         }
                
@@ -200,17 +206,23 @@ namespace projeto_cadastro
         }
 
         private void maisOpçõesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            btnConsultar.Enabled = true;
+        {            
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;
             txtID.Enabled = true;
             txtID.Focus();
         }
 
-        private void frmHome_Load(object sender, EventArgs e)
+        private void frmHome_Load(object sender, EventArgs e) 
         {
 
+        }
+
+        private void registrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsulta frm = new frmConsulta();
+            frm.ShowDialog();
+                
         }
     }
 }
