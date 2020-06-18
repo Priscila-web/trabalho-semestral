@@ -47,3 +47,4 @@ C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cada
 C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.exe
 C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.pdb
 C:\Users\Tester\Desktop\Projeto\Não subir teste\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.frmConsulta.resources
+C:\Users\Tester\Desktop\Projeto\trabalho-semestral\projeto_cadastro\obj\Debug\projeto_cadastro.frmConsulta.resources

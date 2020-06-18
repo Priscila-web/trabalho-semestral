@@ -15,9 +15,7 @@ namespace projeto_cadastro
     {
         //Aqui estou "repassando" os comandos MySql para variaveis.
         MySqlConnection conexao;
-        MySqlCommand comando;
-        MySqlDataAdapter da;
-        MySqlDataReader dr;
+        MySqlCommand comando;        
         String strSQL;
 
         public frmHome()
@@ -39,6 +37,7 @@ namespace projeto_cadastro
             favFilm = cbbFilme.Text;
             favMusic = cbbMusica.Text;
 
+            //O programa vai verificar se existe algum campo em branco, caso sim o mesmo vai retornar uma mensagem avisando e não irá adicionar o registro no banco.
             if (string.IsNullOrEmpty(nomeUsu) || string.IsNullOrEmpty(sexoUsu) || string.IsNullOrEmpty(ufUsu) || string.IsNullOrEmpty(favFilm) || string.IsNullOrEmpty(favMusic))
             {
                 MessageBox.Show("Um dos campos para inclusão está vazio", "Inclusão de Dados - Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -83,8 +82,7 @@ namespace projeto_cadastro
                 conexao = null;
                 comando = null;
 
-                //Retorna que a operação foi realizada, os campos serão limpos para o proximo cadastro e o cursor será posicionado no campo Nome.
-
+                //Os campos serão limpos para o proximo cadastro e o cursor será posicionado no campo Nome.
                 txtID.Clear();
                 txtNome.Clear();
                 txtIdade.Clear();
@@ -135,15 +133,19 @@ namespace projeto_cadastro
             }
             catch (Exception ex)
             {
+                //Em caso de falha na operação é exibido uma janela com o erro para o usuario
                 MessageBox.Show(ex.Message);
             }
             finally
             {
+                //Fecha a conexão com o banco
                 conexao.Close();
                 conexao = null;
                 comando = null;
 
                 MessageBox.Show("Pessoa alterada!");
+
+            //Após realizado a operação com sucesso ele limpa os campos e reposiciona o cursor para o campo txtNome.
                 txtNome.Clear();
                 txtIdade.Clear();
                 cbbFilme.Text = string.Empty;
@@ -162,18 +164,22 @@ namespace projeto_cadastro
                 //Sintaxe das informações do banco que será conectado.
                 conexao = new MySqlConnection("server = localhost; database = projeto; uid = root; pwd =; port = 3306");
 
-                //Comando SQL para inserção dos dados e criando parametros para cada uma das colunas do banco.
+                //Comando SQL para e exclusão de registros
                 strSQL = "DELETE FROM PROJETO WHERE cad_id=@ID";
                 
+                //Variavel criada para receber o campo de texto ID criado na parte de Design
                 int idUsu;
-
                 idUsu = Convert.ToInt32(txtID.Text);
                 
+                //Indica ao banco e ao c# por sobre qual parametro deve relizar a operação de exclusão
                 comando = new MySqlCommand(strSQL, conexao);
                 comando.Parameters.AddWithValue("@ID", idUsu);
-                
+
+                //Abertura de conexão com o banco e execução do comando SQL declarado
                 conexao.Open();
                 comando.ExecuteNonQuery();
+
+                MessageBox.Show("Pessoa excluida");
             }
             catch (Exception ex)
             {
@@ -181,11 +187,12 @@ namespace projeto_cadastro
             }
             finally
             {
+                //Fecha conexão com banco
                 conexao.Close();
                 conexao = null;
                 comando = null;
 
-                MessageBox.Show("Pessoa excluida");                
+                
             }
         }
 
@@ -206,7 +213,8 @@ namespace projeto_cadastro
         }
 
         private void maisOpçõesToolStripMenuItem_Click(object sender, EventArgs e)
-        {            
+        {       
+            //Habilita botões de exclusão de de alteração, e posiciona o cursor na text box ID 
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;
             txtID.Enabled = true;
@@ -220,9 +228,15 @@ namespace projeto_cadastro
 
         private void registrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsulta frm = new frmConsulta();
+            //Faz o chamado do form que realizara as consultas dos registros que estão no banco
+            frmConsulta frm = new frmConsulta(this);
             frm.ShowDialog();
                 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

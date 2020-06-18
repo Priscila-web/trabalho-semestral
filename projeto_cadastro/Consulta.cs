@@ -14,24 +14,25 @@ namespace projeto_cadastro
 
     public partial class frmConsulta : Form
     {
+
+        frmHome Home;
         MySqlConnection conexao;
         MySqlCommand comando;
         MySqlDataAdapter da;
         MySqlDataReader dr;
         String strSQL;
+
         public frmConsulta()
         {
+        
             InitializeComponent();
         }
 
-            frmHome Home;
-
-        public frmConsulta(frmHome Home)
+        public frmConsulta(frmHome Home)            
         {
             this.Home = Home;
             InitializeComponent();
-        }
-
+        }     
 
         private void frmConsulta_Load(object sender, EventArgs e)
         {
@@ -42,28 +43,28 @@ namespace projeto_cadastro
         {
             try
             {
-                //Sintaxe das informações do banco que será conectado.
+                //Caminho do banco.
                 conexao = new MySqlConnection("server = localhost; database = projeto; uid = root; pwd =; port = 3306");
 
-                //Comando SQL para inserção dos dados e criando parametros para cada uma das colunas do banco.
+                //Comando SQL para exibir registros.
                 strSQL = "SELECT * FROM PROJETO";
-
                 comando = new MySqlCommand(strSQL, conexao);
-
                 da = new MySqlDataAdapter(strSQL, conexao);
 
+                //faz uma cópia dos registros do banco no DataGridView
                 DataTable dt = new DataTable();
-
                 da.Fill(dt);
                 dgvConsulta.DataSource = dt;
 
             }
             catch (Exception ex)
             {
+                //Em caso de erro uma mensagem será exibida
                 MessageBox.Show(ex.Message);
             }
             finally
             {
+                //Após exibir resultados a conexão com o banco é fechada
                 conexao.Close();
                 conexao = null;
                 comando = null;
@@ -94,21 +95,19 @@ namespace projeto_cadastro
             
             dr = null;
 
-            strSQL = "SELECT * FROM PROJETO WHERE cad_id=@ID";
+            strSQL = "SELECT cad_name,cad_sex,cad_idade,cad_UF,cad_filme,cad_musica FROM PROJETO WHERE cad_id=@ID";
             try
             {                
                 conexao.Open();
                 comando = new MySqlCommand(strSQL, conexao);
-                
-
+                                
                 comando.Parameters.AddWithValue("@ID", Convert.ToInt32(codigoCliente));
 
-                dr = comando.ExecuteReader();
-                
+                dr = comando.ExecuteReader();                
 
                 if (dr.Read())
                 {
-                    
+                   
                     Home.txtNome.Text = dr["cad_name"].ToString();
                     Home.cbbSex.Text = dr["cad_sex"].ToString();
                     Home.txtIdade.Text = dr["cad_idade"].ToString();
