@@ -110,6 +110,7 @@ namespace projeto_cadastro
 
                 if (dr.Read())
                 {
+                    Home.txtID.Text = dr["cad_id"].ToString();
                     Home.txtNome.Text = dr["cad_name"].ToString();
                     Home.cbbSex.Text = dr["cad_sex"].ToString();
                     Home.txtIdade.Text = dr["cad_idade"].ToString();
@@ -118,6 +119,7 @@ namespace projeto_cadastro
                     Home.cbbMusica.Text = dr["cad_musica"].ToString();
                 }
                 comando.ExecuteNonQuery();
+                dr.Close();
             }
             catch (Exception trataErro)
             {
@@ -125,18 +127,13 @@ namespace projeto_cadastro
             }
             finally
             {
-                if (dr != null)
-                {
-                    dr.Close();
-                }
-                if (conexao != null)
-                {
-                    conexao.Close();
-                }
-            }
-            //this.Close();
+               
+                conexao.Close();
+                conexao = null;
+                comando = null;
+            
+            }            
         }
-
     }
 }
 
