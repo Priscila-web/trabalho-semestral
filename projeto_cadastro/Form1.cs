@@ -21,7 +21,6 @@ namespace projeto_cadastro
         public frmHome()
         {
             InitializeComponent();
-
         }           
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,7 +52,6 @@ namespace projeto_cadastro
                 //Comando SQL para inserção dos dados e criando parametros para cada uma das colunas do banco.
                 strSQL = "INSERT INTO PROJETO (cad_name,cad_sex,cad_idade,cad_UF,cad_filme,cad_musica) VALUES(@NOME,@SEXO,@IDADE,@UF,@FILME,@MUSICA)";
 
-
                 //referenciando parametros criados a partir das colunas com as variaveis respectivas do formulario.
                 comando = new MySqlCommand(strSQL, conexao);
                 comando.Parameters.AddWithValue("@NOME", nomeUsu);
@@ -62,8 +60,6 @@ namespace projeto_cadastro
                 comando.Parameters.AddWithValue("@UF", ufUsu);
                 comando.Parameters.AddWithValue("@FILME", favFilm);
                 comando.Parameters.AddWithValue("@MUSICA", favMusic);
-
-
 
                 //Abrindo conexão com o banco, executando o comando INSERT que foi declarado acima e exibindo ao usuario mensagem de Cadastro bem sucedido.
                 conexao.Open();
@@ -145,7 +141,8 @@ namespace projeto_cadastro
 
                 MessageBox.Show("Pessoa alterada!");
 
-            //Após realizado a operação com sucesso ele limpa os campos e reposiciona o cursor para o campo txtNome.
+                //Após realizado a operação com sucesso ele limpa os campos e reposiciona o cursor para o campo txtNome.
+                txtID.Clear();
                 txtNome.Clear();
                 txtIdade.Clear();
                 cbbFilme.Text = string.Empty;
@@ -153,7 +150,6 @@ namespace projeto_cadastro
                 cbbSex.Text = string.Empty;
                 cbbUF.Text = string.Empty;
                 txtNome.Focus();
-                
             }
         }
                
@@ -192,7 +188,16 @@ namespace projeto_cadastro
                 conexao = null;
                 comando = null;
 
-                
+                //limpa os campos logo após fazer a exclusão do banco.
+                txtID.Clear();
+                txtNome.Clear();
+                txtIdade.Clear();
+                cbbFilme.Text = string.Empty;
+                cbbMusica.Text = string.Empty;
+                cbbSex.Text = string.Empty;
+                cbbUF.Text = string.Empty;
+                txtNome.Focus();
+
             }
         }
 
@@ -230,13 +235,21 @@ namespace projeto_cadastro
         {
             //Faz o chamado do form que realizara as consultas dos registros que estão no banco
             frmConsulta frm = new frmConsulta(this);
-            frm.ShowDialog();
-                
+            frm.ShowDialog();                
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnLimpar_Click(object sender, EventArgs e)
         {
-           
+        
+            //Limpa os campos preenchidos
+            txtID.Clear();
+            txtNome.Clear();
+            txtIdade.Clear();
+            cbbFilme.Text = string.Empty;
+            cbbMusica.Text = string.Empty;
+            cbbSex.Text = string.Empty;
+            cbbUF.Text = string.Empty;
+            txtNome.Focus();
         }
     }
 }

@@ -51,6 +51,7 @@
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -248,7 +249,7 @@
             // btnCadastro
             // 
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastro.Location = new System.Drawing.Point(85, 298);
+            this.btnCadastro.Location = new System.Drawing.Point(23, 298);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(100, 28);
             this.btnCadastro.TabIndex = 12;
@@ -282,7 +283,7 @@
             // 
             this.btnAlterar.Enabled = false;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Location = new System.Drawing.Point(24, 332);
+            this.btnAlterar.Location = new System.Drawing.Point(24, 338);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(100, 28);
             this.btnAlterar.TabIndex = 16;
@@ -294,7 +295,7 @@
             // 
             this.btnExcluir.Enabled = false;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(143, 334);
+            this.btnExcluir.Location = new System.Drawing.Point(143, 340);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(100, 28);
             this.btnExcluir.TabIndex = 18;
@@ -352,11 +353,23 @@
             this.txtID.Size = new System.Drawing.Size(151, 20);
             this.txtID.TabIndex = 21;
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(143, 298);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(100, 28);
+            this.btnLimpar.TabIndex = 22;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(276, 382);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
@@ -412,6 +425,7 @@
         public System.Windows.Forms.ComboBox cbbFilme;
         public System.Windows.Forms.ComboBox cbbMusica;
         public System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }
 

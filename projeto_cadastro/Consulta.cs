@@ -14,20 +14,13 @@ namespace projeto_cadastro
 
     public partial class frmConsulta : Form
     {
-
         frmHome Home;
         MySqlConnection conexao;
         MySqlCommand comando;
         MySqlDataAdapter da;
         MySqlDataReader dr;
         String strSQL;
-
-        public frmConsulta()
-        {
         
-            InitializeComponent();
-        }
-
         public frmConsulta(frmHome Home)            
         {
             this.Home = Home;
@@ -55,6 +48,17 @@ namespace projeto_cadastro
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvConsulta.DataSource = dt;
+
+                //Deixa as linhas com uma cor sim e outra não
+                dgvConsulta.RowsDefaultCellStyle.BackColor = Color.White;
+                dgvConsulta.AlternatingRowsDefaultCellStyle.BackColor = Color.Aquamarine;
+                dgvConsulta.Columns[0].HeaderCell.Value = "Codigo";
+                dgvConsulta.Columns[1].HeaderCell.Value = "Nome";
+                dgvConsulta.Columns[2].HeaderCell.Value = "Sexo";
+                dgvConsulta.Columns[3].HeaderCell.Value = "Idade";
+                dgvConsulta.Columns[4].HeaderCell.Value = "UF";
+                dgvConsulta.Columns[5].HeaderCell.Value = "Filme";
+                dgvConsulta.Columns[6].HeaderCell.Value = "Musica";
 
             }
             catch (Exception ex)
@@ -95,19 +99,17 @@ namespace projeto_cadastro
             
             dr = null;
 
-            strSQL = "SELECT cad_name,cad_sex,cad_idade,cad_UF,cad_filme,cad_musica FROM PROJETO WHERE cad_id=@ID";
+            strSQL = "SELECT * FROM PROJETO WHERE cad_id=@ID";
             try
             {                
                 conexao.Open();
-                comando = new MySqlCommand(strSQL, conexao);
-                                
+                comando = new MySqlCommand(strSQL, conexao);                                
                 comando.Parameters.AddWithValue("@ID", Convert.ToInt32(codigoCliente));
 
                 dr = comando.ExecuteReader();                
 
                 if (dr.Read())
                 {
-                   
                     Home.txtNome.Text = dr["cad_name"].ToString();
                     Home.cbbSex.Text = dr["cad_sex"].ToString();
                     Home.txtIdade.Text = dr["cad_idade"].ToString();
@@ -132,7 +134,7 @@ namespace projeto_cadastro
                     conexao.Close();
                 }
             }
-            this.Close();
+            //this.Close();
         }
 
     }
