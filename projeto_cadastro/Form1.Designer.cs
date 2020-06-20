@@ -184,32 +184,20 @@
             this.cbbFilme.FormattingEnabled = true;
             this.cbbFilme.Items.AddRange(new object[] {
             "Ação",
-            "",
             "Animação",
             "Aventura",
-            "",
             "Cinema de arte",
-            "",
             "Comédia",
             "Comédia romântica",
-            "",
             "Comédia dramática",
-            "",
             "Comédia de ação",
-            "",
             "Documentário",
-            "",
             "Drama",
-            "",
             "Ficção científica",
-            "",
             "Musical",
-            "",
             "policial",
-            "",
             "Romance",
             "Suspense",
-            "",
             "Terror"});
             this.cbbFilme.Location = new System.Drawing.Point(34, 203);
             this.cbbFilme.Name = "cbbFilme";
