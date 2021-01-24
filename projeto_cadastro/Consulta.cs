@@ -14,12 +14,12 @@ namespace projeto_cadastro
 
     public partial class frmConsulta : Form
     {
-        frmHome Home;
-        MySqlConnection conexao;
-        MySqlCommand comando;
-        MySqlDataAdapter da;
-        MySqlDataReader dr;
-        String strSQL;
+        public frmHome Home;
+        public MySqlConnection conexao;
+        public MySqlCommand comando;
+        public MySqlDataAdapter da;
+        public MySqlDataReader dr;
+        public String strSQL;
         
         public frmConsulta(frmHome Home)            
         {
@@ -50,8 +50,8 @@ namespace projeto_cadastro
                 dgvConsulta.DataSource = dt;
 
                 //Deixa as linhas com uma cor sim e outra não
-                dgvConsulta.RowsDefaultCellStyle.BackColor = Color.White;
-                dgvConsulta.AlternatingRowsDefaultCellStyle.BackColor = Color.Aquamarine;
+                /*dgvConsulta.RowsDefaultCellStyle.BackColor = Color.White;
+                dgvConsulta.AlternatingRowsDefaultCellStyle.BackColor = Color.Aquamarine;*/
                 dgvConsulta.Columns[0].HeaderCell.Value = "Codigo";
                 dgvConsulta.Columns[1].HeaderCell.Value = "Nome";
                 dgvConsulta.Columns[2].HeaderCell.Value = "Sexo";
@@ -64,7 +64,7 @@ namespace projeto_cadastro
             catch (Exception ex)
             {
                 //Em caso de erro uma mensagem será exibida
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,"Infelizmente não foi possivel realizar a consulta.");
             }
             finally
             {
